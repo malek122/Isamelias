@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isamelias | Live Piano & Synths Production</title>
+  <meta name="description"
+    content="Isamelias: Pianist, Composer, and Live Electronic Performer. Experience the collision of acoustic and electronic worlds.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- Intro Overlay -->
+  <div id="intro">
+    <div class="intro-content">
+      <p class="intro-subtitle">Live Piano &amp; Synths Production</p>
+      <h1 class="intro-logo">Isamelias</h1>
+      <div class="intro-line"></div>
+    </div>
+  </div>
+
+  <!-- Announcement Banner -->
+  <div id="announcement-banner" class="announcement-banner">
+    <div class="banner-inner">
+      <!-- Icon -->
+      <div class="banner-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/>
+          <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/>
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/>
+          <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/>
+        </svg>
+      </div>
+      <!-- Text -->
+      <p class="banner-text">
+        Every third Thursday of the month at 21h00 — Live show broadcasted on
+      </p>
+      <!-- Action link -->
+      <a href="http://radioalhara.net" target="_blank" class="banner-action">Radio Al Hara</a>
+    </div>
+    <!-- Close -->
+    <button id="banner-close" class="banner-close" aria-label="Close announcement">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">ISAMELIAS</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">The Artist</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="#performance">Music</a></li>
+        <li><a href="#tours">Concerts</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#articles">Press</a></li>
+        <li><a href="mailto:isameliasofficial@gmail.com" class="btn-primary">Connect</a></li>
+      </ul>
+      <div class="mobile-menu-btn">☰</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Carousel -->
+  <section id="hero" class="hero">
+    <video autoplay muted loop playsinline class="hero-video" poster="./assets/img/hero-poster.jpg">
+      <source src="./assets/videos/0210.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <p class="hero-name">ISAM ELIAS</p>
+      <h1 class="subtitle">Live Piano &amp; Synths Production</h1>
+      <div class="hero-ctas">
+        <a href="#performance" class="btn-hero">Listen to TUBES EP</a>
+        <a href="#tours" class="btn-hero-concerts">Concerts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container grid-2-col">
+      <div class="image-wrapper">
+        <img src="./assets/img/Artist Section.jpg" alt="Isamelias Portrait" class="artist-img">
+      </div>
+      <div class="text-content">
+        <h2>The Artist</h2>
+        <p>ISAM is a pianist, composer, and live electronic performer whose music places the piano at the center of a
+          powerful <strong class="highlight">Afro-Electro universe</strong>.</p>
+        <p>Blending synthesizers, keyboards, and live vocals, his performances unfold as a musical journey moving
+          fluidly from classical influences and Western electronic rhythms to upbeat dance grooves infused with oriental
+          melodies.</p>
+        <p>Driven by improvisation and live interaction, ISAM’s shows are immersive experiences where acoustic and
+          electronic worlds collide. His music reflects movement, travel, and cultural dialogue — connecting ancestral
+          rhythms with contemporary club energy.</p>
+        <a href="./assets/docs/presskit.pdf" class="btn-secondary" download>Download Press Kit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance/Music Section — ScrollExpandMedia -->
+  <section id="performance" class="sem-section">
+
+    <!-- Sticky viewport: animates as user scrolls through the scroll-space below -->
+    <div class="sem-sticky">
+
+      <!-- No background image — dark canvas shows through -->
+
+      <!-- Expanding album art -->
+      <div class="sem-media-wrap" id="sem-media-wrap">
+        <img src="./assets/img/Tubes.jpeg" alt="TUBES EP Cover Art" class="sem-media-img">
+        <div class="sem-media-dim" id="sem-media-dim"></div>
+      </div>
+
+      <!-- Label above the image -->
+      <p class="sem-label">TUBES EP</p>
+
+      <!-- Title words (slide apart on scroll) -->
+      <div class="sem-title-row">
+        <h2 class="sem-title-word" id="sem-title-left">LATEST</h2>
+        <h2 class="sem-title-word" id="sem-title-right">RELEASE</h2>
+      </div>
+
+      <!-- Date + scroll hint (slide apart) -->
+      <div class="sem-meta">
+        <p class="sem-date" id="sem-date">JUNE 2025</p>
+        <p class="sem-hint" id="sem-hint">&#8595; Scroll to expand</p>
+      </div>
+
+    </div>
+
+    <!-- 200vh scroll space — drives the expansion animation -->
+    <div class="sem-scroll-space"></div>
+
+    <!-- Content revealed after full expansion -->
+    <div class="sem-children">
+      <div class="container">
+
+        <div class="grid-2-col reverse">
+          <div class="text-content">
+            <h3>TUBES EP - JUNE 2025</h3>
+            <p>TUBES EP is a five-track release developed from ISAM's live performances. The EP translates the energy and
+              dynamics of the stage into recorded form, combining piano, synthesizers, electronic rhythms, and vocals.</p>
+            <p>Rooted in improvisation, TUBES reflects ISAM's signature Afro-electronic sound, bridging live musicianship
+              with contemporary dance and melodic influences.</p>
+            <div class="streaming-links">
+              <a href="https://open.spotify.com/album/4mFyQkvErh9IoJ31VV31Xe?si=FJbBSKUvQcyMVPhQ887fkA" target="_blank"
+                class="btn-spotify">Stream on Spotify</a>
+              <a href="https://music.apple.com/fr/album/tubes-ep/1816914445?l=en-GB" target="_blank"
+                class="btn-apple">Apple Music</a>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img src="./assets/img/Tubes.jpeg" alt="TUBES EP Cover Art" class="album-cover">
+          </div>
+        </div>
+
+        <!-- Featured Video -->
+        <div class="featured-video-section">
+          <h3 class="featured-video-title">Arabesques 2024 - Isam Elias (Palestine) : la musique est aussi politique</h3>
+          <a class="video-wrapper video-thumbnail-link" href="https://www.youtube.com/watch?v=NJxTVbMDqxY" target="_blank" aria-label="Watch on YouTube">
+            <img src="https://img.youtube.com/vi/NJxTVbMDqxY/maxresdefault.jpg" alt="Arabesques 2024 - Isam Elias">
+            <div class="video-play-btn">&#9654;</div>
+            <span class="video-yt-label">Watch on YouTube</span>
+          </a>
+        </div>
+
+        <!-- Music Slider -->
+        <div class="music-slider-section">
+          <h3 class="slider-heading">Discography</h3>
+          <div class="slider-container">
+            <button class="slider-btn slider-btn-prev" aria-label="Previous" disabled>&#8592;</button>
+            <div class="slider-track-wrapper">
+              <div class="slider-track">
+
+                <div class="slider-card">
+                  <div class="song-thumbnail">
+                    <img src="./assets/img/warriors never die.jpg" alt="Warriors Never Die (2023)">
+                    <div class="play-overlay">▶</div>
+                  </div>
+                  <div class="song-info">
+                    <p class="slider-card-band">Zenobia</p>
+                    <h3>Warriors Never Die (2023)</h3>
+                    <a href="https://open.spotify.com/album/2sOBc9bIVVPXl1Td5JgXK0?si=mIqHwC_xQnmoCaSfOrVbQg" target="_blank" class="btn-listen">Listen</a>
+                  </div>
+                </div>
+
+                <div class="slider-card">
+                  <div class="song-thumbnail">
+                    <img src="./assets/img/halak halak.jpg" alt="Halak Halak (2020)">
+                    <div class="play-overlay">▶</div>
+                  </div>
+                  <div class="song-info">
+                    <p class="slider-card-band">Zenobia</p>
+                    <h3>Halak Halak (2020)</h3>
+                    <a href="https://open.spotify.com/album/0gdN4M9685LmNgBQTLdvvO?si=-lUB-b91SUWBPhAsJ9P3yA" target="_blank" class="btn-listen">Listen</a>
+                  </div>
+                </div>
+
+                <div class="slider-card">
+                  <div class="song-thumbnail">
+                    <img src="./assets/img/ksr ksr ksr.jpg" alt="KSR KSR KSR EP (2019)">
+                    <div class="play-overlay">▶</div>
+                  </div>
+                  <div class="song-info">
+                    <p class="slider-card-band">Zenobia</p>
+                    <h3>KSR KSR KSR (2019)</h3>
+                    <a href="https://open.spotify.com/album/2qhVNCRUtKY55ulxwrisRo?si=EdK2-0C3TterZJVBLWjBRw" target="_blank" class="btn-listen">Listen</a>
+                  </div>
+                </div>
+
+                <div class="slider-card">
+                  <div class="song-thumbnail">
+                    <img src="./assets/img/mashini.jpg" alt="Mashini (2022)">
+                    <div class="play-overlay">▶</div>
+                  </div>
+                  <div class="song-info">
+                    <p class="slider-card-band">Ghazall Band</p>
+                    <h3>Mashini (2022)</h3>
+                    <a href="https://open.spotify.com/track/0mf0Ghq7Uqvx6XeDi4Fg2t?si=e01bee5574f448a6" target="_blank" class="btn-listen">Listen</a>
+                  </div>
+                </div>
+
+                <div class="slider-card">
+                  <div class="song-thumbnail">
+                    <img src="./assets/img/tayheen.jpg" alt="Tayheen (2020)">
+                    <div class="play-overlay">▶</div>
+                  </div>
+                  <div class="song-info">
+                    <p class="slider-card-band">Ghazall Band</p>
+                    <h3>Tayheen (2020)</h3>
+                    <a href="https://open.spotify.com/album/3WoD2qqMCpXEe1hMPhF9M1?si=J7UaWZUVQsG-nimKtQjPKA" target="_blank" class="btn-listen">Listen</a>
+                  </div>
+                </div>
+
+                <div class="slider-card">
+                  <div class="song-thumbnail">
+                    <img src="./assets/img/logo ghazal.jpg" alt="A Tareeq Album (2017)">
+                    <div class="play-overlay">▶</div>
+                  </div>
+                  <div class="song-info">
+                    <p class="slider-card-band">Ghazall Band</p>
+                    <h3>A Tareeq (2017)</h3>
+                    <a href="https://open.spotify.com/album/5sy5gs8QvcIyLKiK0Ikzu2?si=wR5Z4odjQ_in4DDwS4pv7A" target="_blank" class="btn-listen">Listen</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <button class="slider-btn slider-btn-next" aria-label="Next">&#8594;</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Tours Section -->
+  <section id="tours" class="section">
+    <div class="container">
+      <h2 class="section-title">Selected Performances & Festivals</h2>
+      <p class="section-intro">In 2025, ISAM presented his live project on international stages across Europe, Africa,
+        and Asia.</p>
+
+      <div class="tour-controls">
+        <button id="btn-2025" class="btn-toggle">2025</button>
+        <button id="btn-2026" class="btn-toggle active">2026</button>
+      </div>
+
+      <div id="tour-list" class="tour-list">
+        <!-- Events will be injected here via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section dark-bg">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+    </div>
+    <div class="circular-gallery-wrapper">
+      <div id="circular-gallery" class="circular-gallery"></div>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles" class="section dark-bg">
+    <div class="container">
+      <h2 class="section-title">Press &amp; Articles</h2>
+      <div class="articles-slider-section">
+        <div class="articles-slider-container">
+          <button class="slider-btn articles-btn-prev" aria-label="Previous" disabled>&#8592;</button>
+          <div class="articles-track-wrapper">
+            <div class="articles-track">
+
+              <div class="article-card">
+                <div class="article-image">
+                  <img src="./assets/img/Article 1.webp" alt="Isam Elias, synthétiseur d'influences à Marseille">
+                </div>
+                <div class="article-content">
+                  <span class="article-date">20/03/2026</span>
+                  <h3 class="article-title">Isam Elias, synthétiseur d'influences à Marseille</h3>
+                  <p class="article-desc">Ce pianiste et compositeur palestinien, qui mêle les airs du Levant à des sonorités afro et électro, est programmé par Babel Music XP à la Plateforme, vendredi 20 mars.</p>
+                  <a href="https://www.lamarseillaise.fr/culture/isam-elias-synthetiseur-d-influences-a-marseille-LF19855248" target="_blank" class="btn-read-now">Read Now</a>
+                </div>
+              </div>
+
+              <div class="article-card">
+                <div class="article-image">
+                  <img src="./assets/img/article 2.webp" alt="Isam Elias, du piano classique au plus pur électro">
+                </div>
+                <div class="article-content">
+                  <span class="article-date">22/03/2026</span>
+                  <h3 class="article-title">Isam Elias, du piano classique au plus pur électro, l'art d'électriser la Palestine</h3>
+                  <p class="article-desc">Isam Elias, dans les coulisses du Babel Music XP, avec son sourire et son optimisme permanent.</p>
+                  <a href="https://www.rfi.fr/fr/podcasts/les-p%C3%A9pites-musicales-de-rfi/20260321-isam-elias-du-piano-classique-au-plus-pur-%C3%A9lectro-l-art-d-%C3%A9lectriser-la-palestine" target="_blank" class="btn-read-now">Read Now</a>
+                </div>
+              </div>
+
+              <div class="article-card">
+                <div class="article-image">
+                  <img src="./assets/img/Article 3.png" alt="Electrifying Sounds: An Interview with Isam Elias">
+                </div>
+                <div class="article-content">
+                  <span class="article-date">20/12/2024</span>
+                  <h3 class="article-title">Electrifying Sounds: An Interview with Isam Elias</h3>
+                  <p class="article-desc">Isam Elias is a Palestinian pianist, composer, singer, and songwriter. Born in 1991 in Nazareth, he graduated from the Rimon School of Jazz and Contemporary Music in 2017.</p>
+                  <a href="https://ibraaz.org/ibraaz-publishing/read/electrifying-sounds-an-interview-with-islam-elias" target="_blank" class="btn-read-now">Read Now</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button class="slider-btn articles-btn-next" aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section dark-bg">
+    <div class="container text-center">
+      <h2 class="section-title">Connect</h2>
+      <p>Follow ISAMELIAS on social media for updates and music.</p>
+
+      <div class="social-icons">
+        <a href="https://open.spotify.com/artist/11oxh46Sp5uHrNnGQ2qV7X?si=A2-0ZY94RpO0iSqQIOajFg" target="_blank"
+          title="Spotify">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"
+            width="40">
+        </a>
+        <a href="https://www.youtube.com/channel/UCeg7bmm9T8E4LRXrARWsFWw" target="_blank" title="YouTube">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+            alt="YouTube" width="50">
+        </a>
+        <a href="https://www.instagram.com/isam.elias/?hl=en" target="_blank" title="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"
+            width="40">
+        </a>
+        <a href="https://www.facebook.com/isameliasofficial/" target="_blank" title="Facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook"
+            width="40">
+        </a>
+      </div>
+
+      <div class="contact-container">
+        <a href="mailto:isameliasofficial@gmail.com" class="btn-email">isameliasofficial@gmail.com</a>
+
+        <div class="booking-section">
+          <h3>For Booking :<br>Nwar Music Production</h3>
+          <a href="mailto:contact@nwar-music.com" class="btn-booking">contact@nwar-music.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Isamelias. All Rights Reserved.</p>
+    <p class="footer-credit">Design &amp; Dev by <a href="https://maleksoffice.com" target="_blank">Maleksoffice</a></p>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
