@@ -1599,9 +1599,9 @@ footer {
     will-change: transform;
 }
 
-/* Spacer that drives scroll-linked animation (200vh) */
+/* Spacer that drives scroll-linked animation */
 .sem-scroll-space {
-    height: 200vh;
+    height: 80vh;
 }
 
 /* Children content — revealed after animation completes */
