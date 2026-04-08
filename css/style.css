@@ -11,7 +11,7 @@
     --color-primary: #c9a458;   /* antique gold */
     --color-border:  rgba(201, 164, 88, 0.18);
 
-    --font-heading: 'Cinzel', serif;
+    --font-heading: 'Raleway', sans-serif;
     --font-body:    'DM Sans', sans-serif;
 
     --container-width: 1200px;
@@ -154,10 +154,10 @@ body.banner-visible .navbar {
 .intro-logo {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 10vw, 6.5rem);
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     color: var(--color-text);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.18em;
     line-height: 1;
     opacity: 0;
     transform: translateY(10px);
@@ -663,10 +663,10 @@ strong {
 .logo {
     font-family: var(--font-heading);
     font-size: 1.35rem;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     color: var(--color-text);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.2em;
 }
 
 .nav-links {
@@ -1135,6 +1135,106 @@ footer {
     border-color: var(--color-primary);
     color: #080808;
 }
+
+.btn-listen-bold {
+    font-weight: 700;
+    padding: 11px 28px;
+    font-size: 0.78rem;
+    border-color: var(--color-primary);
+}
+
+/* ---- Social Follow CTAs ---- */
+.social-follow-grid {
+    margin-top: 56px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.social-follow-cta {
+    padding: 22px 28px;
+    background: #0e0e0e;
+    border-radius: 12px;
+}
+
+.ig-follow-cta  { border: 1px solid rgba(131, 58, 180, 0.35); }
+.yt-follow-cta  { border: 1px solid rgba(255, 0, 0, 0.3); }
+.fb-follow-cta  { border: 1px solid rgba(24, 119, 242, 0.3); }
+
+.social-follow-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-follow-icon { flex-shrink: 0; }
+
+.social-follow-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.social-follow-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7a7168;
+}
+
+/* Instagram handle */
+.ig-live-handle {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* YouTube handle */
+.yt-live-handle {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #FF0000;
+}
+
+/* Facebook handle */
+.fb-live-handle {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #1877F2;
+}
+
+.social-follow-btn {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 11px 26px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #fff;
+    transition: opacity 0.2s;
+}
+
+.social-follow-btn:hover { opacity: 0.85; }
+
+.ig-follow-btn { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+.yt-follow-btn { background: #FF0000; }
+.fb-follow-btn { background: #1877F2; }
 
 /* ---- Tour Pagination ---- */
 .tour-pagination {
