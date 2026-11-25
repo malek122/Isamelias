@@ -554,6 +554,47 @@ strong {
     border-radius: 2px;
 }
 
+/* ---- Video section (click-to-load YouTube) ---- */
+.video-section .container {
+    max-width: 1000px;
+}
+
+.video-section-intro {
+    color: var(--color-muted);
+    font-weight: 300;
+    margin: 20px 0 32px;
+}
+
+.yt-lite img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+    transition: filter 0.3s, transform 0.4s;
+}
+
+.yt-lite:hover img {
+    filter: brightness(0.55);
+    transform: scale(1.03);
+}
+
+.yt-lite .video-play-btn {
+    border: none;
+    cursor: pointer;
+}
+
+.yt-lite:hover .video-play-btn {
+    background: var(--color-primary);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.yt-lite .video-yt-label {
+    text-decoration: none;
+    z-index: 1;
+}
+
 /* ---- Music Slider ---- */
 .music-slider-section {
     margin-top: 72px;
@@ -710,18 +751,20 @@ strong {
     height: 100vh;
     min-height: 600px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;          /* text sits low, clear of the name on the stage screen */
     justify-content: center;
+    padding-bottom: 11vh;
     text-align: center;
     overflow: hidden;
 }
 
-.hero-video {
+.hero-image {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 30%;
     z-index: 0;
 }
 
@@ -731,9 +774,10 @@ strong {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(8, 8, 8, 0.35) 0%,
-        rgba(8, 8, 8, 0.55) 60%,
-        rgba(8, 8, 8, 0.95) 100%
+        rgba(8, 8, 8, 0.25) 0%,
+        rgba(8, 8, 8, 0.05) 35%,
+        rgba(8, 8, 8, 0.55) 72%,
+        rgba(8, 8, 8, 0.96) 100%
     );
     z-index: 1;
 }
@@ -1588,6 +1632,10 @@ footer {
     .tour-item {
         grid-template-columns: 96px 1fr;
         gap: 12px;
+    }
+
+    .hero-image {
+        object-position: 34% center;
     }
 
     .tour-banner {

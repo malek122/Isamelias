@@ -16,7 +16,7 @@
     rel="stylesheet">
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" href="./css/style.css?v=3">
+  <link rel="stylesheet" href="./css/style.css?v=4">
 </head>
 
 <body>
@@ -81,10 +81,10 @@
 
   <!-- Hero Section with Carousel -->
   <section id="hero" class="hero">
-    <video autoplay muted loop playsinline class="hero-video" poster="./assets/img/hero-poster.jpg">
-      <source src="./assets/videos/hero.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <img src="./assets/img/hero-stage.jpg"
+      srcset="./assets/img/hero-stage-1000.jpg 1000w, ./assets/img/hero-stage.jpg 2000w" sizes="100vw"
+      alt="Isam Elias performing live on stage" class="hero-image" width="2000" height="1331"
+      fetchpriority="high" decoding="async">
     <div class="hero-content">
       <p class="hero-name">ISAM ELIAS</p>
       <h1 class="subtitle">Live Piano &amp; Synths Production</h1>
@@ -112,6 +112,21 @@
           electronic worlds collide. His music reflects movement, travel, and cultural dialogue — connecting ancestral
           rhythms with contemporary club energy.</p>
         <a href="./assets/docs/presskit.pdf" class="btn-secondary" download>Download Press Kit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video" class="section video-section">
+    <div class="container">
+      <h2 class="section-title">Watch Live</h2>
+      <p class="video-section-intro">Piano, synths and live vocals — see what an ISAM show feels like.</p>
+      <div class="video-wrapper yt-lite" data-yt-id="qVBGf6nZnws">
+        <img src="https://i.ytimg.com/vi/qVBGf6nZnws/maxresdefault.jpg" alt="Isam Elias live video"
+          loading="lazy" decoding="async">
+        <button type="button" class="video-play-btn" aria-label="Play video">&#9654;</button>
+        <a href="https://www.youtube.com/watch?v=qVBGf6nZnws" target="_blank" rel="noopener"
+          class="video-yt-label">Watch on YouTube</a>
       </div>
     </div>
   </section>
@@ -459,7 +474,7 @@
     <p class="footer-credit">Design &amp; Dev by <a href="https://maleksoffice.com" target="_blank">Maleksoffice</a></p>
   </footer>
 
-  <script src="./js/script.js?v=3"></script>
+  <script src="./js/script.js?v=4"></script>
 </body>
 
 </html>

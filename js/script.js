@@ -428,6 +428,27 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', initArticles);
     }
 
+    // --- YouTube click-to-load (player only downloads when someone presses play) ---
+    document.querySelectorAll('.yt-lite').forEach(box => {
+        const id = box.dataset.ytId;
+        const thumb = box.querySelector('img');
+        // maxresdefault isn't generated for every video; YouTube then serves a 120px placeholder
+        if (thumb) {
+            thumb.addEventListener('load', () => {
+                if (thumb.naturalWidth <= 120) thumb.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+            }, { once: true });
+        }
+        box.querySelector('.video-play-btn').addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+            iframe.title = 'Isam Elias live video';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            box.innerHTML = '';
+            box.appendChild(iframe);
+        });
+    });
+
     // --- Scroll Expand Media ---
     const semSection = document.querySelector('.sem-section');
     if (semSection) {
