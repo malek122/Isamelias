@@ -16,7 +16,7 @@
     rel="stylesheet">
 
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-  <link rel="stylesheet" href="./css/style.css?v=2">
+  <link rel="stylesheet" href="./css/style.css?v=3">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
   <!-- Hero Section with Carousel -->
   <section id="hero" class="hero">
     <video autoplay muted loop playsinline class="hero-video" poster="./assets/img/hero-poster.jpg">
-      <source src="./assets/videos/0210.mp4" type="video/mp4">
+      <source src="./assets/videos/hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="hero-content">
@@ -99,7 +99,7 @@
   <section id="about" class="section">
     <div class="container grid-2-col">
       <div class="image-wrapper">
-        <img src="./assets/img/Artist Section.jpg" alt="Isamelias Portrait" class="artist-img">
+        <img src="./assets/img/portrait-fur-coat.jpg" alt="Isam Elias portrait" class="artist-img" width="1333" height="2000" loading="lazy" decoding="async">
       </div>
       <div class="text-content">
         <h2>The Artist</h2>
@@ -172,7 +172,7 @@
             </div>
           </div>
           <div class="image-wrapper">
-            <img src="./assets/img/Tubes.jpeg" alt="TUBES EP Cover Art" class="album-cover">
+            <img src="./assets/img/Tubes.jpeg" alt="TUBES EP Cover Art" class="album-cover" loading="lazy">
           </div>
         </div>
 
@@ -182,7 +182,7 @@
           </h3>
           <a class="video-wrapper video-thumbnail-link" href="https://www.youtube.com/watch?v=NJxTVbMDqxY"
             target="_blank" aria-label="Watch on YouTube">
-            <img src="https://img.youtube.com/vi/NJxTVbMDqxY/maxresdefault.jpg" alt="Arabesques 2024 - Isam Elias">
+            <img src="https://img.youtube.com/vi/NJxTVbMDqxY/maxresdefault.jpg" alt="Arabesques 2024 - Isam Elias" loading="lazy">
             <div class="video-play-btn">&#9654;</div>
             <span class="video-yt-label">Watch on YouTube</span>
           </a>
@@ -247,19 +247,35 @@
   </section>
 
   <!-- Tours Section -->
-  <section id="tours" class="section">
-    <div class="container">
-      <h2 class="section-title">Selected Performances & Festivals</h2>
-      <p class="section-intro">In 2025, ISAM presented his live project on international stages across Europe, Africa,
-        and Asia.</p>
+  <section id="tours" class="section tours-section">
 
-      <div class="tour-controls">
-        <button id="btn-2025" class="btn-toggle">2025</button>
-        <button id="btn-2026" class="btn-toggle active">2026</button>
+    <!-- Full-bleed live photo with tour stats -->
+    <div class="tour-banner">
+      <img src="./assets/img/live-festival-crowd.jpg" alt="Isam Elias performing to a festival crowd"
+        class="tour-banner-img" width="2000" height="1331" loading="lazy" decoding="async">
+      <div class="tour-banner-overlay">
+        <p class="tour-banner-kicker">On Tour</p>
+        <h2 class="tour-banner-title">Concerts &amp; Festivals</h2>
+        <p class="tour-stats" id="tour-stats"></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="section-intro">From Les Vieilles Charrues and FMM Sines to Ziro Festival in India — ISAM takes his
+        live project to stages across Europe, Africa, and Asia.</p>
+
+      <!-- Upcoming (auto-filled from today's date) -->
+      <div id="tour-upcoming" class="tour-upcoming">
+        <h3 class="tour-subheading">Upcoming</h3>
+        <div id="tour-upcoming-list" class="tour-list"></div>
       </div>
 
+      <!-- Archive -->
+      <h3 class="tour-subheading">Past Performances</h3>
+      <div id="tour-controls" class="tour-controls" role="group" aria-label="Filter past performances by year"></div>
+
       <div id="tour-list" class="tour-list">
-        <!-- Events will be injected here via JavaScript -->
+        <!-- Events are injected by JavaScript -->
       </div>
 
       <!-- Social Follow CTAs -->
@@ -443,7 +459,7 @@
     <p class="footer-credit">Design &amp; Dev by <a href="https://maleksoffice.com" target="_blank">Maleksoffice</a></p>
   </footer>
 
-  <script src="./js/script.js"></script>
+  <script src="./js/script.js?v=3"></script>
 </body>
 
 </html>

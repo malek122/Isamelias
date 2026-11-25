@@ -59,83 +59,150 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Events Data ---
-    const events2025 = [
-        { date: '11/01/2025', location: 'La Fleche D\'or, Paris' },
-        { date: '15/02/2025', location: 'l\'Alimentation Generale, Paris' },
-        { date: '21/05/2025', location: 'La Cite Internationale des Arts, Paris' },
-        { date: '24/05/2025', location: 'La Chinois, Paris' },
-        { date: '30/05/2025', location: 'Pom & Pépin, Paris' },
-        { date: '07/06/2025', location: 'Festival Orizons, Perigueux' },
-        { date: '14/06/2025', location: 'La Friche de La Belle de Mai, Marseille' },
-        { date: '19/06/2025', location: 'Babour Sauvage, Paris' },
-        { date: '20/06/2025', location: 'La Cite des Arts Montmartre, Paris' },
-        { date: '21/06/2025', location: 'Snooze, Paris' },
-        { date: '21/06/2025', location: 'Malakoff en Fete, Malakoff' },
-        { date: '28/06/2025', location: 'Le Relais Pantin, Paris' },
-        { date: '05/07/2025', location: 'Ibraaz, London' },
-        { date: '18/07/2025', location: 'Festival Les Suds, Arles' },
-        { date: '19/07/2025', location: 'Detours du Monde, Chanac' },
-        { date: '25/07/2025', location: 'Sfinks Festival, Belgium' },
-        { date: '28/08/2025', location: 'Festival Fisel, Rostrenen' },
-        { date: '12/09/2025', location: 'Festival Arabesque, Montpellier' },
-        { date: '13/09/2025', location: 'Theatre de la Mer, Sete' },
-        { date: '19/09/2025', location: 'L\'boulvard Festival, Casablanca' },
-        { date: '26/09/2025', location: 'Bamba Crew, Nantes' },
-        { date: '18/10/2025', location: 'Gwangju Busking Club, South Korea' },
-        { date: '25/10/2025', location: 'La Station Gare des Mines, Paris' },
-        { date: '21/11/2025', location: 'Visa For Music, Rabat' },
-        { date: '31/12/2025', location: 'Tunis sur Scene, Aubervilliers' }
+    // Format: { date: 'YYYY-MM-DD', venue, city }. Past/upcoming is computed from today's date,
+    // so the "Upcoming" list updates itself — just add new shows here.
+    const events = [
+        // 2025
+        { date: '2025-01-11', venue: 'La Flèche d\'Or', city: 'Paris, France' },
+        { date: '2025-02-15', venue: 'L\'Alimentation Générale', city: 'Paris, France' },
+        { date: '2025-05-21', venue: 'La Cité Internationale des Arts', city: 'Paris, France' },
+        { date: '2025-05-24', venue: 'Le Chinois', city: 'Paris, France' },
+        { date: '2025-05-30', venue: 'Pom & Pépin', city: 'Paris, France' },
+        { date: '2025-06-07', venue: 'Festival Orizons', city: 'Périgueux, France' },
+        { date: '2025-06-14', venue: 'La Friche la Belle de Mai', city: 'Marseille, France' },
+        { date: '2025-06-19', venue: 'Babour Sauvage', city: 'Paris, France' },
+        { date: '2025-06-20', venue: 'La Cité des Arts Montmartre', city: 'Paris, France' },
+        { date: '2025-06-21', venue: 'Snooze', city: 'Paris, France' },
+        { date: '2025-06-21', venue: 'Malakoff en Fête', city: 'Malakoff, France' },
+        { date: '2025-06-28', venue: 'Le Relais', city: 'Pantin, France' },
+        { date: '2025-07-05', venue: 'Ibraaz', city: 'London, UK' },
+        { date: '2025-07-18', venue: 'Festival Les Suds', city: 'Arles, France' },
+        { date: '2025-07-19', venue: 'Détours du Monde', city: 'Chanac, France' },
+        { date: '2025-07-25', venue: 'Sfinks Festival', city: 'Belgium' },
+        { date: '2025-08-28', venue: 'Festival Fisel', city: 'Rostrenen, France' },
+        { date: '2025-09-12', venue: 'Festival Arabesques', city: 'Montpellier, France' },
+        { date: '2025-09-13', venue: 'Théâtre de la Mer', city: 'Sète, France' },
+        { date: '2025-09-19', venue: 'L\'Boulevard Festival', city: 'Casablanca, Morocco' },
+        { date: '2025-09-26', venue: 'Bamba Crew', city: 'Nantes, France' },
+        { date: '2025-10-18', venue: 'Gwangju Busking Club', city: 'Gwangju, South Korea' },
+        { date: '2025-10-25', venue: 'La Station – Gare des Mines', city: 'Paris, France' },
+        { date: '2025-11-21', venue: 'Visa For Music', city: 'Rabat, Morocco' },
+        { date: '2025-12-31', venue: 'Tunis sur Scène', city: 'Aubervilliers, France' },
+
+        // 2026
+        { date: '2026-01-16', venue: 'L\'Alimentation Générale', city: 'Paris, France' },
+        { date: '2026-01-23', venue: 'Le Makeda', city: 'Marseille, France' },
+        { date: '2026-01-31', venue: 'FGO-Barbara', city: 'Paris, France' },
+        { date: '2026-02-12', venue: 'Au Fil des Voix', city: 'Paris, France' },
+        { date: '2026-03-20', venue: 'Babel Music XP', city: 'Marseille, France' },
+        { date: '2026-04-10', venue: 'L\'Alimentation Générale', city: 'Paris, France' },
+        { date: '2026-05-16', venue: '', city: 'Helsinki, Finland' },
+        { date: '2026-05-22', venue: 'La Kulture', city: 'Strasbourg, France' },
+        { date: '2026-05-23', venue: 'Festival La Rue Libre', city: 'La Salvetat-Peyralès, France' },
+        { date: '2026-05-30', venue: 'La Fête du Pois Chiche', city: 'Montaren-et-Saint-Médiers, France' },
+        { date: '2026-05-31', venue: 'Musée des Confluences', city: 'Lyon, France' },
+        { date: '2026-06-05', venue: 'La Bellevilloise', city: 'Paris, France' },
+        { date: '2026-06-06', venue: 'Stereolux', city: 'Nantes, France' },
+        { date: '2026-06-13', venue: 'Institut du Monde Arabe (IMA)', city: 'Paris, France' },
+        { date: '2026-06-21', venue: 'Canal 93', city: 'Bobigny, France' },
+        { date: '2026-06-25', venue: 'Fusion Festival', city: 'Lärz, Germany' },
+        { date: '2026-06-27', venue: 'Nuits Métis', city: 'Miramas, France' },
+        { date: '2026-07-19', venue: 'Les Vieilles Charrues', city: 'Carhaix, France' },
+        { date: '2026-07-25', venue: 'FMM Sines', city: 'Sines, Portugal' },
+        { date: '2026-07-31', venue: 'Rhybadi', city: 'Schaffhausen, Switzerland' },
+        { date: '2026-09-03', venue: 'L\'Alimentation Générale', city: 'Paris, France' },
+        { date: '2026-09-12', venue: '', city: 'Bonac, France' },
+        { date: '2026-09-22', venue: 'The Piano Man', city: 'New Delhi, India' },
+        { date: '2026-09-24', venue: 'AMPM', city: 'Kolkata, India' },
+        { date: '2026-09-26', venue: 'Ziro Festival', city: 'Ziro, India' },
+        { date: '2026-09-30', venue: 'Soho House', city: 'Mumbai, India' },
+        { date: '2026-10-03', venue: 'The Pleasance Theatre', city: 'London, UK' },
+        { date: '2026-10-15', venue: 'MaMA Festival', city: 'Paris, France' },
+        { date: '2026-10-23', venue: 'Jodhpur RIFF', city: 'Jodhpur, India' },
+        { date: '2026-11-07', venue: 'MuCEM', city: 'Marseille, France' },
+        { date: '2026-11-19', venue: 'Cabaret Sauvage', city: 'Paris, France' },
+        { date: '2026-12-03', venue: 'Bars en Trans', city: 'Rennes, France' },
+        { date: '2026-12-19', venue: 'L\'Alimentation Générale', city: 'Paris, France' }
     ];
 
-    const events2026 = [
-        { date: '16/01/2026', location: 'L\'Alimentation Generale, Paris' },
-        { date: '23/01/2026', location: 'Le Makeda, Marseille' },
-        { date: '31/01/2026', location: 'FGO Barbara, Paris' },
-        { date: '12/02/2026', location: 'Au Fils des Voix, Paris' },
-        { date: '20/03/2026', location: 'Babel Music XP, Marseille' },
-        { date: '10/04/2026', location: 'L\'Alimentation Generale, Paris' },
-        { date: '02/05/2026', location: 'Les Pays Des Amplis, Chatillon-en-Michaille' },
-        { date: '22/05/2026', location: 'TBA, Strasbourg' },
-        { date: '23/05/2026', location: 'Festival La Rue Libre, Le Salvetat-Peyrales' },
-        { date: '30/05/2026', location: 'La Fête du Pois Chiche, Montaren-et-Saint-Médiers' },
-        { date: '31/05/2026', location: 'Musée de Confluence, Lyon' },
-        { date: '06/06/2026', location: 'Stereolux, Nantes' },
-        { date: '26/06/2026', location: 'Nuit Metis, Miramas' },
-        { date: '19/07/2026', location: 'Les Vieilles Charrues, Carhaix' },
-        { date: '25/07/2026', location: 'FMM Sines, Portugal' },
-        { date: '31/07/2026', location: 'Rhybadi, Schaffhouse, Switzerland' }
-    ];
+    // --- Tour Rendering ---
+    const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const today = new Date();
+    const todayKey = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, '0'), String(today.getDate()).padStart(2, '0')].join('-');
+    const isUpcoming = e => e.date >= todayKey; // ISO strings compare correctly
 
-    // --- Tour Rendering with Pagination ---
+    function eventHTML(event) {
+        const [y, m, d] = event.date.split('-');
+        const title = event.venue || event.city;
+        const sub = event.venue ? event.city : '';
+        return `
+            <span class="tour-date"><span class="tour-day">${d}</span> ${MONTHS[parseInt(m, 10) - 1]} ${y}</span>
+            <span class="tour-location">
+                <span class="tour-venue-name">${title}</span>
+                ${sub ? `<span class="tour-city">${sub}</span>` : ''}
+            </span>`;
+    }
+
+    // Tour stats in the banner (derived from the data above, so it stays accurate)
+    const statsEl = document.getElementById('tour-stats');
+    if (statsEl) {
+        const countries = new Set(events.map(e => e.city.split(',').pop().trim()));
+        const played = events.filter(e => !isUpcoming(e)).length;
+        statsEl.innerHTML = `<span>${played}+ shows</span><span>${countries.size} countries</span><span>since 2025</span>`;
+    }
+
+    // Upcoming shows (always visible, across all years)
+    const upcomingWrap = document.getElementById('tour-upcoming');
+    const upcomingList = document.getElementById('tour-upcoming-list');
+    if (upcomingWrap && upcomingList) {
+        const upcoming = events.filter(isUpcoming).sort((a, b) => a.date.localeCompare(b.date));
+        if (upcoming.length === 0) {
+            upcomingWrap.hidden = true;
+        } else {
+            upcoming.forEach((event, i) => {
+                const item = document.createElement('div');
+                item.className = 'tour-item tour-item-upcoming' + (i === 0 ? ' is-next' : '');
+                item.innerHTML = eventHTML(event) + (i === 0 ? '<span class="tour-badge">Next show</span>' : '');
+                upcomingList.appendChild(item);
+            });
+        }
+    }
+
+    // Archive by year, with pagination
     const tourListContainer = document.getElementById('tour-list');
-    const btn2025 = document.getElementById('btn-2025');
-    const btn2026 = document.getElementById('btn-2026');
+    const tourControls = document.getElementById('tour-controls');
     const EVENTS_PER_PAGE = 8;
     let currentPage = 1;
-    let currentEvents = events2026;
+    let currentEvents = [];
 
-    if (tourListContainer) {
-        function renderEvents(events, page) {
+    if (tourListContainer && tourControls) {
+        // Past shows only (upcoming ones live in their own block above).
+        // Newest year first; within a year, most recent show first.
+        const past = events.filter(e => !isUpcoming(e));
+        const years = [...new Set(past.map(e => e.date.slice(0, 4)))].sort().reverse();
+        const byYear = y => past.filter(e => e.date.startsWith(y)).sort((a, b) => b.date.localeCompare(a.date));
+
+        function renderEvents(list, page) {
             tourListContainer.innerHTML = '';
             const start = (page - 1) * EVENTS_PER_PAGE;
-            const pageEvents = events.slice(start, start + EVENTS_PER_PAGE);
-
-            pageEvents.forEach(event => {
+            list.slice(start, start + EVENTS_PER_PAGE).forEach(event => {
                 const item = document.createElement('div');
-                item.classList.add('tour-item');
-                item.innerHTML = `
-                    <span class="tour-date">${event.date}</span>
-                    <span class="tour-location">${event.location}</span>
-                `;
+                item.className = 'tour-item';
+                item.innerHTML = eventHTML(event);
                 tourListContainer.appendChild(item);
             });
-
-            renderPagination(events, page);
+            renderPagination(list, page);
         }
 
-        function renderPagination(events, page) {
+        function goToPage(page) {
+            currentPage = page;
+            renderEvents(currentEvents, currentPage);
+            tourControls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function renderPagination(list, page) {
             let paginationEl = document.getElementById('tour-pagination');
-            const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
+            const totalPages = Math.ceil(list.length / EVENTS_PER_PAGE);
 
             if (totalPages <= 1) {
                 if (paginationEl) paginationEl.remove();
@@ -148,63 +215,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 paginationEl.className = 'tour-pagination';
                 tourListContainer.parentNode.insertBefore(paginationEl, tourListContainer.nextSibling);
             }
-
             paginationEl.innerHTML = '';
 
-            const prevBtn = document.createElement('button');
-            prevBtn.innerHTML = '&#8592;';
-            prevBtn.className = 'pagination-btn';
-            prevBtn.disabled = page === 1;
-            prevBtn.addEventListener('click', () => {
-                currentPage--;
-                renderEvents(currentEvents, currentPage);
-                tourListContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-            paginationEl.appendChild(prevBtn);
+            const makeBtn = (label, target, disabled, active) => {
+                const b = document.createElement('button');
+                b.innerHTML = label;
+                b.className = 'pagination-btn' + (active ? ' active' : '');
+                b.disabled = disabled;
+                b.addEventListener('click', () => goToPage(target));
+                paginationEl.appendChild(b);
+            };
 
-            for (let i = 1; i <= totalPages; i++) {
-                const pageBtn = document.createElement('button');
-                pageBtn.textContent = i;
-                pageBtn.className = 'pagination-btn' + (i === page ? ' active' : '');
-                const pageNum = i;
-                pageBtn.addEventListener('click', () => {
-                    currentPage = pageNum;
-                    renderEvents(currentEvents, currentPage);
-                    tourListContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-                paginationEl.appendChild(pageBtn);
-            }
-
-            const nextBtn = document.createElement('button');
-            nextBtn.innerHTML = '&#8594;';
-            nextBtn.className = 'pagination-btn';
-            nextBtn.disabled = page === totalPages;
-            nextBtn.addEventListener('click', () => {
-                currentPage++;
-                renderEvents(currentEvents, currentPage);
-                tourListContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-            paginationEl.appendChild(nextBtn);
+            makeBtn('&#8592;', page - 1, page === 1, false);
+            for (let i = 1; i <= totalPages; i++) makeBtn(String(i), i, false, i === page);
+            makeBtn('&#8594;', page + 1, page === totalPages, false);
         }
 
-        // Default: show 2026
-        renderEvents(events2026, currentPage);
-
-        btn2025.addEventListener('click', () => {
-            btn2025.classList.add('active');
-            btn2026.classList.remove('active');
-            currentEvents = events2025;
+        function selectYear(year) {
+            tourControls.querySelectorAll('.btn-toggle').forEach(b => {
+                const on = b.dataset.year === year;
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-pressed', on);
+            });
+            currentEvents = byYear(year);
             currentPage = 1;
-            renderEvents(events2025, currentPage);
+            renderEvents(currentEvents, currentPage);
+        }
+
+        years.forEach(year => {
+            const btn = document.createElement('button');
+            btn.className = 'btn-toggle';
+            btn.dataset.year = year;
+            btn.textContent = year;
+            btn.addEventListener('click', () => selectYear(year));
+            tourControls.appendChild(btn);
         });
 
-        btn2026.addEventListener('click', () => {
-            btn2026.classList.add('active');
-            btn2025.classList.remove('active');
-            currentEvents = events2026;
-            currentPage = 1;
-            renderEvents(events2026, currentPage);
-        });
+        selectYear(years[0]);
     }
 
     // --- Music Slider ---
@@ -264,15 +311,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryEl = document.getElementById('circular-gallery');
     if (galleryEl) {
         const galleryItems = [
+            { url: './assets/img/live-stage-arms-up.jpg',                              caption: 'Live' },
+            { url: './assets/img/portrait-court.jpg',                                  caption: 'Isam Elias' },
             { url: './assets/img/Gallery.jpeg',                                        caption: 'Live Performance' },
             { url: './assets/img/Artist Section.jpg',                                  caption: 'Isam Elias' },
+            { url: './assets/img/live-festival-crowd.jpg',                             caption: 'Festival' },
             { url: './assets/img/13Isam Elias La Vilette Marluziarte.jpg',             caption: 'La Villette' },
             { url: './assets/img/5dab1464-834c-4504-b9e5-099728454be4.jpg',            caption: 'On Stage' },
             { url: './assets/img/b7b1892b-917e-4cde-9965-cd3344ebc889.jpg',            caption: 'Festival' },
             { url: './assets/img/F000E891-08AB-402A-8A98-5FEB001413F7_1_105_c.jpeg',  caption: 'Performance' },
         ];
 
-        const GALLERY_RADIUS = 480;
+        const GALLERY_RADIUS = 520; // 9 cards × 260px need ~420px min to avoid overlap
         const anglePerItem = 360 / galleryItems.length;
 
         galleryItems.forEach((item, i) => {
@@ -280,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
             div.className = 'gallery-item';
             div.style.transform = `rotateY(${i * anglePerItem}deg) translateZ(${GALLERY_RADIUS}px)`;
             div.innerHTML = `
-                <img src="${item.url}" alt="${item.caption}">
+                <img src="${item.url}" alt="${item.caption}" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><p>${item.caption}</p></div>
             `;
             galleryEl.appendChild(div);

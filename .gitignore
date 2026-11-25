@@ -9,3 +9,6 @@ Thumbs.db
 # Env files
 .env
 .env.local
+
+# Netlify CLI local state
+.netlify
